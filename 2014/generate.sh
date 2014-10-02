@@ -16,7 +16,7 @@ perl -ne 's#CONTENT_GOES_HERE#`cat tmp/friday.inc`#e;print' tmp/friday.html.tmp 
 cat ../template.html \
 | sed 's/DAY_GOES_HERE/Saturday, October 4/g' \
 | sed "s#BITLY_GOES_HERE#${bitly}#" \
-| sed 's/QR_CODE_TOP/450/' | sed 's/QR_CODE_LEFT/790/' \
+| sed 's/QR_CODE_TOP/450/' | sed 's/QR_CODE_LEFT/940/' \
 > tmp/saturday.html.tmp
 perl -ne 's#CONTENT_GOES_HERE#`cat tmp/saturday.inc`#e;print' tmp/saturday.html.tmp > out/saturday.html
 

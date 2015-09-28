@@ -4,7 +4,7 @@ cp scheduleSource/index_page_qr.png out/
 
 mkdir tmp
 
-../sched.pl < scheduleSource/2015friday.tab > tmp/friday.inc
+../sched.pl < scheduleSource/friday.tab > tmp/friday.inc
 cat ../template.html \
 | sed 's/DAY_GOES_HERE/Friday, October 2/g' \
 | sed "s#BITLY_GOES_HERE#${bitly}#" \
@@ -12,7 +12,7 @@ cat ../template.html \
 > tmp/friday.html.tmp
 perl -ne 's#CONTENT_GOES_HERE#`cat tmp/friday.inc`#e;print' tmp/friday.html.tmp > out/friday.html 
 
-../sched.pl < scheduleSource/2015saturday.tab > tmp/saturday.inc
+../sched.pl < scheduleSource/saturday.tab > tmp/saturday.inc
 cat ../template.html \
 | sed 's/DAY_GOES_HERE/Saturday, October 3/g' \
 | sed "s#BITLY_GOES_HERE#${bitly}#" \
@@ -20,7 +20,7 @@ cat ../template.html \
 > tmp/saturday.html.tmp
 perl -ne 's#CONTENT_GOES_HERE#`cat tmp/saturday.inc`#e;print' tmp/saturday.html.tmp > out/saturday.html
 
-../sched.pl < scheduleSource/2015sunday.tab > tmp/sunday.inc
+../sched.pl < scheduleSource/sunday.tab > tmp/sunday.inc
 cat ../template.html \
 | sed 's/DAY_GOES_HERE/Sunday, October 4/g' \
 | sed "s#BITLY_GOES_HERE#${bitly}#" \

@@ -1,6 +1,8 @@
 bitly=http://bit.ly/2015hsb
 
-cp scheduleSource/index_page_qr.png out/
+mkdir -p out
+
+cp assets/* out/
 
 mkdir tmp
 

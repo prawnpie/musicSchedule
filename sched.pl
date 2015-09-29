@@ -63,9 +63,11 @@ sub getAmPm(){
         my $timeString = shift;
 	(my $hours,my $minutes) = split( /:/, $timeString );
 	my $ampm = "am";
+	if( $hours > 11 ){
+		$ampm = "pm";
+	}
 	if( $hours > 12 ) {
 		$hours = $hours - 12;
-		$ampm = "pm";
 	}
 	return "$hours:$minutes$ampm";
 

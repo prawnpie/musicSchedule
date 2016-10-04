@@ -28,6 +28,9 @@ while(<STDIN>){
 
 	my $start = getTime( $startTime ); 
 	my $end   = getTime( $endTime ); 
+  if( ! $endTime ){
+    $end = $start + .75;
+  }
 
 	my $top = $hourHeight * $start - $hourHeight * 11 + $stageHeight + 20;
 	my $left = $stageWidth * $stage - $stageWidth;
